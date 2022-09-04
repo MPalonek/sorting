@@ -65,6 +65,66 @@ void merge_sort_rec(std::vector<int>& D)
     }
 }
 
+void quick_sort_rec(std::vector<int>& D, int start, int end)
+{
+    if (start < end)
+    {
+        // find pivot (could be elem at any index - lets try with last one)
+        int pivot = D[end]; // undefined behavior if vector is empty
+        int sec_ptr = end;
+        bool found_bigger = false;
+
+        // Rearrange the array (partition)
+        // pivot in the "middle"
+        // on the left elements are smaller than pivot
+        // on the right elements are bigger than pivot
+        for (int i = start; i < end; i++)
+        {
+            if (!found_bigger && pivot < D[i])
+            {
+                sec_ptr = i; // get current index
+                found_bigger = true;
+            }
+            else if (found_bigger && pivot > D[i])
+            {
+                int elem = D[i];
+                D[i] = D[sec_ptr];
+                D[sec_ptr] = elem;
+                sec_ptr++;
+            }
+        }
+        if (found_bigger)
+        {
+            D[end] = D[sec_ptr];
+            D[sec_ptr] = pivot;
+        }
+        
+        /*
+        // Divide into sub-arrays and work on them recursively
+        std::vector<int> L, R;
+        for (auto& elem : D)
+        {
+            if (elem < pivot)
+            {
+                L.push_back(elem);
+            }
+            else if (elem > pivot)
+            {
+                R.push_back(elem);
+            }
+        }
+        
+        for (auto elem : D)
+        {
+            std::cout << elem << " ";
+        }
+        std::cout <<"\n---"<< std::endl;
+        */
+        quick_sort_rec(D, start, sec_ptr - 1);
+        quick_sort_rec(D, sec_ptr +1, end);
+    }
+}
+
 void selection_sort_rec(std::vector<int>& D, int k)
 {
     if (k < 1)
