@@ -44,11 +44,11 @@ jobs:
         cmake --version
         mkdir -p build
         cd build
-        cmake .. -DCMAKE_BUILD_TYPE="${{env.BUILD_TYPE}}"
+        cmake -G "Ninja" .. -DCMAKE_BUILD_TYPE="${{env.BUILD_TYPE}}"
     - name: Build
       working-directory: ${{github.workspace}}/build
       run: |
-        make
+        ninja
     - name: Test
       working-directory: ${{github.workspace}}/build/test
       run: |
