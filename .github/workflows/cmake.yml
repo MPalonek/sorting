@@ -23,13 +23,14 @@ jobs:
         sudo apt-get update -y
         sudo apt-get install -y ninja-build
         sudo apt-get install -y build-essential
+        sudo find / | grep ninja
         
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: |
         cmake --version
-        cmake -G "Ninja" -DCMAKE_BUILD_TYPE="${{env.BUILD_TYPE}}" -DCMAKE_INSTALL_PREFIX="${{github.workspace}}/out/install" -DCMAKE_C_COMPILER="/usr/bin/cc" -DCMAKE_CXX_COMPILER="/usr/bin/c++" -DCMAKE_MAKE_PROGRAM="/usr/bin/make" "${{github.workspace}}"
+        cmake -G "Ninja" -DCMAKE_BUILD_TYPE="${{env.BUILD_TYPE}}" -DCMAKE_INSTALL_PREFIX="${{github.workspace}}/out/install" -DCMAKE_C_COMPILER="/usr/bin/cc" -DCMAKE_CXX_COMPILER="/usr/bin/c++" "${{github.workspace}}"
         ls -lah .
         ls -lah ${{github.workspace}}/out
         ls -lah ${{github.workspace}}/out/build
