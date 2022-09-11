@@ -5,6 +5,9 @@ cmake_minimum_required (VERSION 3.14)
 
 # Add source to this project's executable.
 add_executable (gTest "gTest.cpp" "sortingTest.cpp")
+# Copy test/data to output directory
+add_custom_target (copy_assets COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/data ${CMAKE_CURRENT_BINARY_DIR}/data)
+add_dependencies(gTest copy_assets)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET gTest PROPERTY CXX_STANDARD 20)
