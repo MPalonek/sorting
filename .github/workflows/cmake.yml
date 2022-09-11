@@ -45,8 +45,16 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: |
         ninja
+        
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: gTest
+        path: ${{github.workspace}}/build/test/gTest.exe
+        
     - name: Test
       working-directory: ${{github.workspace}}/build/test
       run: |
         dir
-        .\gTest.exe
+        ${{github.workspace}}/build/test/gTest.exe
+        ./gTest.exe
