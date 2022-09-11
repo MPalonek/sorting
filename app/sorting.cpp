@@ -98,28 +98,8 @@ void quick_sort_rec(std::vector<int>& D, int start, int end)
             D[end] = D[sec_ptr];
             D[sec_ptr] = pivot;
         }
-        
-        /*
+		
         // Divide into sub-arrays and work on them recursively
-        std::vector<int> L, R;
-        for (auto& elem : D)
-        {
-            if (elem < pivot)
-            {
-                L.push_back(elem);
-            }
-            else if (elem > pivot)
-            {
-                R.push_back(elem);
-            }
-        }
-        
-        for (auto elem : D)
-        {
-            std::cout << elem << " ";
-        }
-        std::cout <<"\n---"<< std::endl;
-        */
         quick_sort_rec(D, start, sec_ptr - 1);
         quick_sort_rec(D, sec_ptr +1, end);
     }
