@@ -31,6 +31,9 @@ jobs:
         mkdir -p out/install
         cmake -G "Ninja" -DCMAKE_BUILD_TYPE="${{env.BUILD_TYPE}}" -DCMAKE_INSTALL_PREFIX="${{github.workspace}}/out/install" -DCMAKE_C_COMPILER="/usr/bin/cc" -DCMAKE_CXX_COMPILER="/usr/bin/c++" "${{github.workspace}}"
         ls -lah .
+        ls -lah test
+        cat build.ninja
+        ls -lah test/CMakeFiles
         ls -lah out
 
     - name: Build
