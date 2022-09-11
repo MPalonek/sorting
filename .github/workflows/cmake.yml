@@ -44,8 +44,12 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/build
       run: |
+        dir
         ninja
     - name: Test
       working-directory: ${{github.workspace}}/build/test
       run: |
+        dir
+        dir ..
+        dir ..\..
         gTest.exe
