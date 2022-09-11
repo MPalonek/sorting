@@ -1,4 +1,4 @@
-name: CMake - Pull Request
+name: gTest
 
 on:
   [pull_request, workflow_dispatch]
