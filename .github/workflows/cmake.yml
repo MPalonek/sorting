@@ -49,4 +49,4 @@ jobs:
       working-directory: ${{github.workspace}}/build/test
       run: |
         dir
-        ./gTest.exe
+        .\gTest.exe
