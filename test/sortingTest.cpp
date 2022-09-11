@@ -53,7 +53,7 @@ TEST(mergeSortSuite, random10)
 
 TEST(mergeSortSuite, random100)
 {
-	std::ifstream is("../../../../test/data/100.txt");
+	std::ifstream is("data/100.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -70,7 +70,7 @@ TEST(mergeSortSuite, random100)
 
 TEST(mergeSortSuite, random1k)
 {
-	std::ifstream is("../../../../test/data/1k.txt");
+	std::ifstream is("data/1k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -87,7 +87,7 @@ TEST(mergeSortSuite, random1k)
 
 TEST(mergeSortSuite, reversed1k)
 {
-	std::ifstream is("../../../../test/data/1k_reversed.txt");
+	std::ifstream is("data/1k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -104,7 +104,7 @@ TEST(mergeSortSuite, reversed1k)
 
 TEST(mergeSortSuite, random5k)
 {
-	std::ifstream is("../../../../test/data/5k.txt");
+	std::ifstream is("data/5k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -121,7 +121,7 @@ TEST(mergeSortSuite, random5k)
 
 TEST(mergeSortSuite, random10k)
 {
-	std::ifstream is("../../../../test/data/10k.txt");
+	std::ifstream is("data/10k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -138,7 +138,7 @@ TEST(mergeSortSuite, random10k)
 
 TEST(mergeSortSuite, reversed10k)
 {
-	std::ifstream is("../../../../test/data/10k_reversed.txt");
+	std::ifstream is("data/10k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -155,7 +155,7 @@ TEST(mergeSortSuite, reversed10k)
 
 TEST(mergeSortSuite, reversed15k)
 {
-	std::ifstream is("../../../../test/data/15k_reversed.txt");
+	std::ifstream is("data/15k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -218,7 +218,7 @@ TEST(quickSortSuite, random10)
 
 TEST(quickSortSuite, random100)
 {
-	std::ifstream is("../../../../test/data/100.txt");
+	std::ifstream is("data/100.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -235,7 +235,7 @@ TEST(quickSortSuite, random100)
 
 TEST(quickSortSuite, random1k)
 {
-	std::ifstream is("../../../../test/data/1k.txt");
+	std::ifstream is("data/1k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -252,7 +252,7 @@ TEST(quickSortSuite, random1k)
 
 TEST(quickSortSuite, reversed1k)
 {
-	std::ifstream is("../../../../test/data/1k_reversed.txt");
+	std::ifstream is("data/1k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -269,7 +269,7 @@ TEST(quickSortSuite, reversed1k)
 
 TEST(quickSortSuite, random5k)
 {
-	std::ifstream is("../../../../test/data/5k.txt");
+	std::ifstream is("data/5k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -286,7 +286,7 @@ TEST(quickSortSuite, random5k)
 
 TEST(quickSortSuite, random10k)
 {
-	std::ifstream is("../../../../test/data/10k.txt");
+	std::ifstream is("data/10k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -303,7 +303,7 @@ TEST(quickSortSuite, random10k)
 
 TEST(quickSortSuite, reversed10k)
 {
-	std::ifstream is("../../../../test/data/10k_reversed.txt");
+	std::ifstream is("data/10k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -322,7 +322,7 @@ TEST(quickSortSuite, reversed10k)
 // Stack Overflow on Windows10
 TEST(quickSortSuite, reversed15k)
 {
-	std::ifstream is("../../../../test/data/15k_reversed.txt");
+	std::ifstream is("data/15k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -385,7 +385,7 @@ TEST(selectionSortSuite, random10)
 
 TEST(selectionSortSuite, random100)
 {
-	std::ifstream is("../../../../test/data/100.txt");
+	std::ifstream is("data/100.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -402,7 +402,7 @@ TEST(selectionSortSuite, random100)
 
 TEST(selectionSortSuite, random1k)
 {
-	std::ifstream is("../../../../test/data/1k.txt");
+	std::ifstream is("data/1k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -419,7 +419,7 @@ TEST(selectionSortSuite, random1k)
 
 TEST(selectionSortSuite, reversed1k)
 {
-	std::ifstream is("../../../../test/data/1k_reversed.txt");
+	std::ifstream is("data/1k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -436,7 +436,7 @@ TEST(selectionSortSuite, reversed1k)
 
 TEST(selectionSortSuite, random5k)
 {
-	std::ifstream is("../../../../test/data/5k.txt");
+	std::ifstream is("data/5k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -453,7 +453,7 @@ TEST(selectionSortSuite, random5k)
 
 TEST(selectionSortSuite, random10k)
 {
-	std::ifstream is("../../../../test/data/10k.txt");
+	std::ifstream is("data/10k.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -470,7 +470,7 @@ TEST(selectionSortSuite, random10k)
 
 TEST(selectionSortSuite, reversed10k)
 {
-	std::ifstream is("../../../../test/data/10k_reversed.txt");
+	std::ifstream is("data/10k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
@@ -487,7 +487,7 @@ TEST(selectionSortSuite, reversed10k)
 
 TEST(selectionSortSuite, reversed15k)
 {
-	std::ifstream is("../../../../test/data/15k_reversed.txt");
+	std::ifstream is("data/15k_reversed.txt");
 	std::istream_iterator<int> start(is), end;
 	std::vector<int> A(start, end);
 	std::vector<int> B = A;
